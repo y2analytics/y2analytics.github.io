@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Y2 Analytics Coding Standards</title>
+  <meta name="description" content="Coding style guide" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Y2 Analytics Coding Standards" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Coding style guide" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Y2 Analytics Coding Standards" />
+  
+  <meta name="twitter:description" content="Coding style guide" />
+  
+
+
+
+<meta name="date" content="2020-09-23" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="files.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Y2 Analytics Style Guide</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="1" data-path="files.html"><a href="files.html"><i class="fa fa-check"></i><b>1</b> Files</a><ul>
+<li class="chapter" data-level="1.1" data-path="files.html"><a href="files.html#file-names"><i class="fa fa-check"></i><b>1.1</b> File Names</a></li>
+<li class="chapter" data-level="1.2" data-path="files.html"><a href="files.html#internal-structure"><i class="fa fa-check"></i><b>1.2</b> Internal structure</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="files.html"><a href="files.html#sections"><i class="fa fa-check"></i><b>1.2.1</b> Sections</a></li>
+<li class="chapter" data-level="1.2.2" data-path="files.html"><a href="files.html#packages"><i class="fa fa-check"></i><b>1.2.2</b> Packages</a></li>
+<li class="chapter" data-level="1.2.3" data-path="files.html"><a href="files.html#file-paths"><i class="fa fa-check"></i><b>1.2.3</b> File paths</a></li>
+<li class="chapter" data-level="1.2.4" data-path="files.html"><a href="files.html#data-manipulation"><i class="fa fa-check"></i><b>1.2.4</b> Data manipulation</a></li>
+<li class="chapter" data-level="1.2.5" data-path="files.html"><a href="files.html#annotation-and-commented-code"><i class="fa fa-check"></i><b>1.2.5</b> Annotation and commented code</a></li>
+<li class="chapter" data-level="1.2.6" data-path="files.html"><a href="files.html#indentation"><i class="fa fa-check"></i><b>1.2.6</b> Indentation</a></li>
+<li class="chapter" data-level="1.2.7" data-path="files.html"><a href="files.html#function-use"><i class="fa fa-check"></i><b>1.2.7</b> Function use</a></li>
+<li class="chapter" data-level="1.2.8" data-path="files.html"><a href="files.html#reproducibility"><i class="fa fa-check"></i><b>1.2.8</b> Reproducibility</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="syntax.html"><a href="syntax.html"><i class="fa fa-check"></i><b>2</b> Syntax</a><ul>
+<li class="chapter" data-level="2.1" data-path="syntax.html"><a href="syntax.html#object-names"><i class="fa fa-check"></i><b>2.1</b> Object names</a></li>
+<li class="chapter" data-level="2.2" data-path="syntax.html"><a href="syntax.html#spacing"><i class="fa fa-check"></i><b>2.2</b> Spacing</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="syntax.html"><a href="syntax.html#commas"><i class="fa fa-check"></i><b>2.2.1</b> Commas</a></li>
+<li class="chapter" data-level="2.2.2" data-path="syntax.html"><a href="syntax.html#parentheses"><i class="fa fa-check"></i><b>2.2.2</b> Parentheses</a></li>
+<li class="chapter" data-level="2.2.3" data-path="syntax.html"><a href="syntax.html#embracing"><i class="fa fa-check"></i><b>2.2.3</b> Embracing</a></li>
+<li class="chapter" data-level="2.2.4" data-path="syntax.html"><a href="syntax.html#infix-operators"><i class="fa fa-check"></i><b>2.2.4</b> Infix operators</a></li>
+<li class="chapter" data-level="2.2.5" data-path="syntax.html"><a href="syntax.html#extra-spaces"><i class="fa fa-check"></i><b>2.2.5</b> Extra spaces</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="syntax.html"><a href="syntax.html#function-calls"><i class="fa fa-check"></i><b>2.3</b> Function calls</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="syntax.html"><a href="syntax.html#argument-names"><i class="fa fa-check"></i><b>2.3.1</b> Named arguments</a></li>
+<li class="chapter" data-level="2.3.2" data-path="syntax.html"><a href="syntax.html#assignment"><i class="fa fa-check"></i><b>2.3.2</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="syntax.html"><a href="syntax.html#control-flow"><i class="fa fa-check"></i><b>2.4</b> Control flow</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="syntax.html"><a href="syntax.html#indenting"><i class="fa fa-check"></i><b>2.4.1</b> Code blocks</a></li>
+<li class="chapter" data-level="2.4.2" data-path="syntax.html"><a href="syntax.html#inline-statements"><i class="fa fa-check"></i><b>2.4.2</b> Inline statements</a></li>
+<li class="chapter" data-level="2.4.3" data-path="syntax.html"><a href="syntax.html#implicit-type-coercion"><i class="fa fa-check"></i><b>2.4.3</b> Implicit type coercion</a></li>
+<li class="chapter" data-level="2.4.4" data-path="syntax.html"><a href="syntax.html#switch-statements"><i class="fa fa-check"></i><b>2.4.4</b> Switch statements</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="syntax.html"><a href="syntax.html#long-lines"><i class="fa fa-check"></i><b>2.5</b> Long lines</a></li>
+<li class="chapter" data-level="2.6" data-path="syntax.html"><a href="syntax.html#semicolons"><i class="fa fa-check"></i><b>2.6</b> Semicolons</a></li>
+<li class="chapter" data-level="2.7" data-path="syntax.html"><a href="syntax.html#assignment-1"><i class="fa fa-check"></i><b>2.7</b> Assignment</a></li>
+<li class="chapter" data-level="2.8" data-path="syntax.html"><a href="syntax.html#data"><i class="fa fa-check"></i><b>2.8</b> Data</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="syntax.html"><a href="syntax.html#character-vectors"><i class="fa fa-check"></i><b>2.8.1</b> Character vectors</a></li>
+<li class="chapter" data-level="2.8.2" data-path="syntax.html"><a href="syntax.html#logical-vectors"><i class="fa fa-check"></i><b>2.8.2</b> Logical vectors</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="syntax.html"><a href="syntax.html#comments"><i class="fa fa-check"></i><b>2.9</b> Comments</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="functions.html"><a href="functions.html#naming"><i class="fa fa-check"></i><b>3.1</b> Naming</a></li>
+<li class="chapter" data-level="3.2" data-path="syntax.html"><a href="syntax.html#long-lines"><i class="fa fa-check"></i><b>3.2</b> Long lines</a></li>
+<li class="chapter" data-level="3.3" data-path="functions.html"><a href="functions.html#return"><i class="fa fa-check"></i><b>3.3</b> <code>return()</code></a></li>
+<li class="chapter" data-level="3.4" data-path="syntax.html"><a href="syntax.html#comments"><i class="fa fa-check"></i><b>3.4</b> Comments</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="pipes.html"><a href="pipes.html"><i class="fa fa-check"></i><b>4</b> Pipes</a><ul>
+<li class="chapter" data-level="4.1" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="pipes.html"><a href="pipes.html#whitespace"><i class="fa fa-check"></i><b>4.2</b> Whitespace</a></li>
+<li class="chapter" data-level="4.3" data-path="syntax.html"><a href="syntax.html#long-lines"><i class="fa fa-check"></i><b>4.3</b> Long lines</a></li>
+<li class="chapter" data-level="4.4" data-path="pipes.html"><a href="pipes.html#short-pipes"><i class="fa fa-check"></i><b>4.4</b> Short pipes</a></li>
+<li class="chapter" data-level="4.5" data-path="pipes.html"><a href="pipes.html#no-arguments"><i class="fa fa-check"></i><b>4.5</b> No arguments</a></li>
+<li class="chapter" data-level="4.6" data-path="syntax.html"><a href="syntax.html#assignment"><i class="fa fa-check"></i><b>4.6</b> Assignment</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Y2 Analytics Coding Standards</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Y2 Analytics Coding Standards</h1>
+<p class="date"><em>2020-09-23</em></p>
+</div>
+<div id="introduction" class="section level1 unnumbered">
+<h1>Introduction</h1>
+<p>The goal of these coding standards are to improve readability and reproducibility of code with the aim of increasing productivity and efficiency.</p>
+<p>This style guide was developed using significant contributions from the <a href="https://style.tidyverse.org/">tidyverse style guide</a> authored by Hadley Wickham. The original tidyverse style guide content has been modified to reflect the preferred styles of Y2 Analytics.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="files.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
