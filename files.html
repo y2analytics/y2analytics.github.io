@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Files | Y2 Analytics Coding Standards</title>
-  <meta name="description" content="Coding style guide" />
+  <meta name="description" content="Coding Standards" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Files | Y2 Analytics Coding Standards" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Coding style guide" />
+  <meta property="og:description" content="Coding Standards" />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 1 Files | Y2 Analytics Coding Standards" />
   
-  <meta name="twitter:description" content="Coding style guide" />
+  <meta name="twitter:description" content="Coding Standards" />
   
 
 
 
-<meta name="date" content="2020-09-21" />
+<meta name="date" content="2020-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,7 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Y2 Analytics Style Guide</a></li>
+<li><a href="./">Y2 Analytics Coding Standards</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
@@ -239,14 +239,14 @@ chunks. The keyboard shortcut for creating sections is <code>command + shift + r
 beginning of the file. This is more transparent than sprinkling <code>library()</code>
 calls throughout your code or having hidden dependencies that are loaded in a
 startup file, such as <code>.Rprofile</code>.</p>
-<p>Do not load packages you do not use. Never load the <code>magrittr</code> package.</p>
-<p>Do not include <code>install.packages('packagename')</code> in your code, whether or not the command is commented out.</p>
-<p>If you need to load the <code>plyr</code> package, do so before loading <code>tidyverse</code> or <code>dplyr</code>.</p>
+<p>Do not load packages you do not use. Do not include <code>install.packages('packagename')</code> in your code, whether or not the command is commented out.</p>
+<p>Do not load the <code>magrittr</code> package or the <code>plyr</code> package. You should not need to call functions from these packages, but if absolutely necessary, use the <code>package::function</code> format.</p>
 </div>
 <div id="file-paths" class="section level3">
 <h3><span class="header-section-number">1.2.3</span> File paths</h3>
 <p>Add a project path constant at the top of your code, and use the project path to read in and save out data files and output. This makes it easy to change the project path and avoid errors when the project folder is moved.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">PROJECT_PATH &lt;-<span class="st"> &quot;~/Dropbox (Y2 Analytics)/Y2 Analytics Team Folder/Resources/Coding Style Guide/&quot;</span></a>
+<p>File paths are exempt from the rule that lines of code should be no longer than 80 characters.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">PROJECT_PATH &lt;-<span class="st"> &quot;~/Dropbox (Y2 Analytics)/Y2 Analytics Team Folder/Resources/Coding Standards/&quot;</span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">responses &lt;-<span class="st"> </span><span class="kw">read_sav</span>(<span class="kw">str_c</span>(PROJECT_PATH, <span class="st">&quot;data file.sav&quot;</span>))</a></code></pre></div>
 </div>

@@ -5,25 +5,25 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Syntax | Y2 Analytics Coding Standards</title>
-  <meta name="description" content="Coding style guide" />
+  <meta name="description" content="Coding Standards" />
   <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Syntax | Y2 Analytics Coding Standards" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Coding style guide" />
+  <meta property="og:description" content="Coding Standards" />
   
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Chapter 2 Syntax | Y2 Analytics Coding Standards" />
   
-  <meta name="twitter:description" content="Coding style guide" />
+  <meta name="twitter:description" content="Coding Standards" />
   
 
 
 
-<meta name="date" content="2020-09-21" />
+<meta name="date" content="2020-09-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -127,7 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Y2 Analytics Style Guide</a></li>
+<li><a href="./">Y2 Analytics Coding Standards</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a></li>
@@ -225,8 +225,7 @@ Use underscores (<code>_</code>) (so called snake case) to separate words within
 (<code>data.frame</code>), but it’s better to reserve dots exclusively for the S3 object
 system. In S3, methods are given the name <code>function.class</code>; if you also use
 <code>.</code> in function and class names, you end up with confusing methods like
-<code>as.data.frame.data.frame()</code>. <em>include this paragraph?</em></p>
-<p>If you find yourself attempting to cram data into variable names (e.g. <code>model_2018</code>, <code>model_2019</code>, <code>model_2020</code>), consider using a list or data frame instead. <em>include this paragraph?</em></p>
+<code>as.data.frame.data.frame()</code>.</p>
 <p>Generally, variable names should be nouns and function names should be verbs (an exception to this may be functions designed to create charts). Strive for names that are concise and meaningful (this is not easy!).</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># Good</span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2">day_one</a>
@@ -390,10 +389,11 @@ because they are used so commonly. If you override the default value of an
 argument, use the full name:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="co"># Good</span></a>
 <a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw">mean</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb17-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb17-4" data-line-number="4"><span class="co"># Bad</span></a>
-<a class="sourceLine" id="cb17-5" data-line-number="5"><span class="kw">mean</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, , <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb17-6" data-line-number="6"><span class="kw">mean</span>(, <span class="ot">TRUE</span>, <span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="ot">NA</span>))</a></code></pre></div>
+<a class="sourceLine" id="cb17-3" data-line-number="3"><span class="kw">mean</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="dt">na.rm =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb17-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb17-5" data-line-number="5"><span class="co"># Bad</span></a>
+<a class="sourceLine" id="cb17-6" data-line-number="6"><span class="kw">mean</span>(<span class="dt">x =</span> <span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, , <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb17-7" data-line-number="7"><span class="kw">mean</span>(, <span class="ot">TRUE</span>, <span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>, <span class="ot">NA</span>))</a></code></pre></div>
 <p>Avoid partial matching.</p>
 </div>
 <div id="assignment" class="section level3">

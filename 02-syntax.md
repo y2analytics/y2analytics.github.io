@@ -16,7 +16,7 @@ DayOne
 day.one
 ```
 
-Constants (objects that will not change throughout the script) should be named using all uppercase letters, and should be assigned at the top of the script. 
+Constants (objects that will not change throughout the script) should be named using all uppercase letters, and should be assigned at the top of the script.
 
 
 ```r
@@ -27,9 +27,7 @@ Base R uses dots in function names (`contrib.url()`) and class names
 (`data.frame`), but it's better to reserve dots exclusively for the S3 object 
 system. In S3, methods are given the name `function.class`; if you also use 
 `.` in function and class names, you end up with confusing methods like
-`as.data.frame.data.frame()`. *include this paragraph?*
-
-If you find yourself attempting to cram data into variable names (e.g. `model_2018`, `model_2019`, `model_2020`), consider using a list or data frame instead. *include this paragraph?*
+`as.data.frame.data.frame()`. 
 
 Generally, variable names should be nouns and function names should be verbs (an exception to this may be functions designed to create charts). Strive for names that are concise and meaningful (this is not easy!). 
 
@@ -261,6 +259,7 @@ argument, use the full name:
 ```r
 # Good
 mean(1:10, na.rm = TRUE)
+mean(x = 1:10, na.rm = TRUE)
 
 # Bad
 mean(x = 1:10, , FALSE)

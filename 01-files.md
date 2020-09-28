@@ -38,19 +38,19 @@ beginning of the file. This is more transparent than sprinkling `library()`
 calls throughout your code or having hidden dependencies that are loaded in a 
 startup file, such as `.Rprofile`.
 
-Do not load packages you do not use. Never load the `magrittr` package.
+Do not load packages you do not use. Do not include `install.packages('packagename')` in your code, whether or not the command is commented out. 
 
-Do not include `install.packages('packagename')` in your code, whether or not the command is commented out. 
-
-If you need to load the `plyr` package, do so before loading `tidyverse` or `dplyr`.
+Do not load the `magrittr` package or the `plyr` package. You should not need to call functions from these packages, but if absolutely necessary, use the `package::function` format. 
 
 ### File paths
 
 Add a project path constant at the top of your code, and use the project path to read in and save out data files and output. This makes it easy to change the project path and avoid errors when the project folder is moved. 
 
+File paths are exempt from the rule that lines of code should be no longer than 80 characters.
+
 
 ```r
-PROJECT_PATH <- "~/Dropbox (Y2 Analytics)/Y2 Analytics Team Folder/Resources/Coding Style Guide/"
+PROJECT_PATH <- "~/Dropbox (Y2 Analytics)/Y2 Analytics Team Folder/Resources/Coding Standards/"
 
 responses <- read_sav(str_c(PROJECT_PATH, "data file.sav"))
 ```
