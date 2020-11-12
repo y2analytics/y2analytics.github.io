@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Files | Y2 Analytics Coding Standards</title>
   <meta name="description" content="Coding Standards" />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Files | Y2 Analytics Coding Standards" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 
 
 
-<meta name="date" content="2020-09-28" />
+<meta name="date" content="2020-10-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -49,6 +49,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -174,17 +176,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a><ul>
 <li class="chapter" data-level="3.1" data-path="functions.html"><a href="functions.html#naming"><i class="fa fa-check"></i><b>3.1</b> Naming</a></li>
-<li class="chapter" data-level="3.2" data-path="syntax.html"><a href="syntax.html#long-lines"><i class="fa fa-check"></i><b>3.2</b> Long lines</a></li>
+<li class="chapter" data-level="3.2" data-path="functions.html"><a href="functions.html#long-lines-1"><i class="fa fa-check"></i><b>3.2</b> Long lines</a></li>
 <li class="chapter" data-level="3.3" data-path="functions.html"><a href="functions.html#return"><i class="fa fa-check"></i><b>3.3</b> <code>return()</code></a></li>
-<li class="chapter" data-level="3.4" data-path="syntax.html"><a href="syntax.html#comments"><i class="fa fa-check"></i><b>3.4</b> Comments</a></li>
+<li class="chapter" data-level="3.4" data-path="functions.html"><a href="functions.html#comments-in-functions"><i class="fa fa-check"></i><b>3.4</b> Comments in functions</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="pipes.html"><a href="pipes.html"><i class="fa fa-check"></i><b>4</b> Pipes</a><ul>
-<li class="chapter" data-level="4.1" data-path="index.html"><a href="index.html#introduction"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.1" data-path="pipes.html"><a href="pipes.html#piping-introduction"><i class="fa fa-check"></i><b>4.1</b> Piping Introduction</a></li>
 <li class="chapter" data-level="4.2" data-path="pipes.html"><a href="pipes.html#whitespace"><i class="fa fa-check"></i><b>4.2</b> Whitespace</a></li>
-<li class="chapter" data-level="4.3" data-path="syntax.html"><a href="syntax.html#long-lines"><i class="fa fa-check"></i><b>4.3</b> Long lines</a></li>
+<li class="chapter" data-level="4.3" data-path="pipes.html"><a href="pipes.html#long-lines-2"><i class="fa fa-check"></i><b>4.3</b> Long lines</a></li>
 <li class="chapter" data-level="4.4" data-path="pipes.html"><a href="pipes.html#short-pipes"><i class="fa fa-check"></i><b>4.4</b> Short pipes</a></li>
 <li class="chapter" data-level="4.5" data-path="pipes.html"><a href="pipes.html#no-arguments"><i class="fa fa-check"></i><b>4.5</b> No arguments</a></li>
-<li class="chapter" data-level="4.6" data-path="syntax.html"><a href="syntax.html#assignment"><i class="fa fa-check"></i><b>4.6</b> Assignment</a></li>
+<li class="chapter" data-level="4.6" data-path="pipes.html"><a href="pipes.html#assignment-2"><i class="fa fa-check"></i><b>4.6</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="ggplot2.html"><a href="ggplot2.html"><i class="fa fa-check"></i><b>5</b> ggplot2</a><ul>
+<li class="chapter" data-level="5.1" data-path="ggplot2.html"><a href="ggplot2.html#ggplot-introduction"><i class="fa fa-check"></i><b>5.1</b> ggplot introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="ggplot2.html"><a href="ggplot2.html#whitespace-1"><i class="fa fa-check"></i><b>5.2</b> Whitespace</a></li>
+<li class="chapter" data-level="5.3" data-path="ggplot2.html"><a href="ggplot2.html#long-lines-3"><i class="fa fa-check"></i><b>5.3</b> Long lines</a></li>
+<li class="chapter" data-level="5.4" data-path="ggplot2.html"><a href="ggplot2.html#structure"><i class="fa fa-check"></i><b>5.4</b> Structure</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -211,7 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="file-names" class="section level2">
 <h2><span class="header-section-number">1.1</span> File Names</h2>
 <p>File names should be concise but meaningful and end in <code>.R</code>. Avoid using special characters in file names - stick with numbers, letters, <code>-</code>, and <code>_</code>. Include your initials at the end of a file name.</p>
-<p>For projects with multiple code files, include a two digit number at the beginning of the file name. This makes it easy to understand the workflow of past projects. If multiple analysts are coding the same step of a project (such as chart creation), each code file should begin with the same number. If it seems likely you’ll have more than 10 files, left pad with zero:</p>
+<p>For projects with multiple code files, include a two digit number at the beginning of the file name. This makes it easy to understand the workflow of past projects. If multiple analysts are coding the same step of a project (such as chart creation), each code file should begin with the same number.</p>
 <pre><code># Good
 01 Modeling MTG.R
 04 - utility_functions XYZ.R
@@ -252,7 +260,7 @@ startup file, such as <code>.Rprofile</code>.</p>
 </div>
 <div id="data-manipulation" class="section level3">
 <h3><span class="header-section-number">1.2.4</span> Data manipulation</h3>
-<p>New variables that will be referenced more than once should be created in a global mutate section towards the top of the code, close to or in the same section where the data is read in. If a variable will only be used in one section of analysis then it should be created as close to its use as possible.</p>
+<p>New column variables that will be referenced more than once should be created in a global mutate section towards the top of the code, close to or in the same section where the data is read in. If a variable will only be used in one section of analysis then it should be created as close to its use as possible. Functions should follow this same convention–functions used in multiple sections should be created at the top of the script while functions only used within a single section may be defined in that section.</p>
 <p>Global variables you create should be given new names rather than replacing the existing variable they are based on.</p>
 <p>Variables should be created using tidyverse functions and syntax where possible. Data manipulation should be done in as few steps as possible-don’t use multiple mutate functions where one would suffice.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Good</span></a>

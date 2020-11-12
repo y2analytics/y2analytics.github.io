@@ -1,6 +1,6 @@
 # Pipes
 
-## Introduction
+## Piping Introduction
 
 Use `%>%` to emphasise a sequence of actions, rather than the object that the actions are being performed on. 
 

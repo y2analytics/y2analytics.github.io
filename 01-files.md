@@ -4,7 +4,7 @@
 
 File names should be concise but meaningful and end in `.R`. Avoid using special characters in file names - stick with numbers, letters, `-`, and `_`. Include your initials at the end of a file name. 
 
-For projects with multiple code files, include a two digit number at the beginning of the file name. This makes it easy to understand the workflow of past projects. If multiple analysts are coding the same step of a project (such as chart creation), each code file should begin with the same number. If it seems likely you'll have more than 10 files, left pad with zero:
+For projects with multiple code files, include a two digit number at the beginning of the file name. This makes it easy to understand the workflow of past projects. If multiple analysts are coding the same step of a project (such as chart creation), each code file should begin with the same number. 
 
     # Good
     01 Modeling MTG.R
@@ -57,7 +57,7 @@ responses <- read_sav(str_c(PROJECT_PATH, "data file.sav"))
 
 ### Data manipulation
 
-New variables that will be referenced more than once should be created in a global mutate section towards the top of the code, close to or in the same section where the data is read in.  If a variable will only be used in one section of analysis then it should be created as close to its use as possible. 
+New column variables that will be referenced more than once should be created in a global mutate section towards the top of the code, close to or in the same section where the data is read in. If a variable will only be used in one section of analysis then it should be created as close to its use as possible. Functions should follow this same convention--functions used in multiple sections should be created at the top of the script while functions only used within a single section may be defined in that section. 
 
 Global variables you create should be given new names rather than replacing the existing variable they are based on. 
 

@@ -94,27 +94,9 @@ print.url <- function(x, ...) {
 }
 ```
 
-## Comments
+## Comments in functions
 
-In code, use comments to explain the "why" not the "what" or "how". Each line 
-of a comment should begin with the comment symbol and a single space: `# `.
-
-
-```r
-# Good
-
-# Objects like data frames are treated as leaves
-x <- map_if(x, is_bare_list, recurse)
-
-
-# Bad
-
-# Recurse only with bare lists
-x <- map_if(x, is_bare_list, recurse)
-```
-
-Comments should be in sentence case, and only end with a full stop if they
-contain at least two sentences:
+In functions intended for publication in a package, comments should be in sentence case, and only end with a full stop if they contain at least two sentences:
 
 
 ```r

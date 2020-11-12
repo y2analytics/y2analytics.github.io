@@ -1,7 +1,7 @@
 --- 
 title: "Y2 Analytics Coding Standards"
 bibliography: book.bib
-date: "2020-09-28"
+date: "2020-11-11"
 output: pdf_document
 documentclass: book
 link-citations: yes

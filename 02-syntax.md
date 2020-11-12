@@ -2,8 +2,7 @@
 
 ## Object names
 
-Variable and function names should use only lowercase letters, numbers, and `_`. 
-Use underscores (`_`) (so called snake case) to separate words within a name, don't use a period (`.`) or omit a delimiter between words.
+Dataset (or other variable objects) and function names should use only lowercase letters, numbers, and `_`. Use underscores (`_`) (so called snake case) to separate words within a name, don't use a period (`.`) or omit a delimiter between words. 
 
 
 ```r
@@ -23,11 +22,7 @@ Constants (objects that will not change throughout the script) should be named u
 CHART_PATH <- "filepath"
 ```
 
-Base R uses dots in function names (`contrib.url()`) and class names 
-(`data.frame`), but it's better to reserve dots exclusively for the S3 object 
-system. In S3, methods are given the name `function.class`; if you also use 
-`.` in function and class names, you end up with confusing methods like
-`as.data.frame.data.frame()`. 
+New column names should follow the convention established in the dataset they belong to. Depending on the source of the dataset, this may be snake_case, CamelCase, ALLCAPS, alllowercase, or another format. 
 
 Generally, variable names should be nouns and function names should be verbs (an exception to this may be functions designed to create charts). Strive for names that are concise and meaningful (this is not easy!). 
 
@@ -52,6 +47,12 @@ c <- 10
 mean <- function(x) sum(x)
 responses$weights <- weights(rake_object)
 ```
+
+Base R uses dots in function names (`contrib.url()`) and class names 
+(`data.frame`), but it's better to reserve dots exclusively for the S3 object 
+system. In S3, methods are given the name `function.class`; if you also use 
+`.` in function and class names, you end up with confusing methods like
+`as.data.frame.data.frame()`. 
 
 ## Spacing
 
@@ -436,10 +437,7 @@ switch(y, 1, 2, 3)
 
 ## Long lines
 
-Strive to limit your code to 80 characters per line. This fits comfortably on a 
-printed page with a reasonably sized font. If you find yourself running out of 
-room, this is a good indication that you should encapsulate some of the work in 
-a separate function. File path names are exempt as they will generally be longer than 80 characters.
+Strive to limit your code and comments to 80 characters per line. This fits comfortably on a printed page with a reasonably sized font. If you find yourself running out of room, this is a good indication that you should encapsulate some of the work in a separate function. File path names and character strings may be exempt as they will often be longer than 80 characters.
 
 You can add a faint overlayed line to the source pane in RStudio to mark the width of 80 characters by clicking on RStudio in the menu bar and navigating to Preferences > Code > Display and selecting Show margin and setting column margin to 80. 
 
@@ -560,7 +558,7 @@ x %<>% 5
 
 ### Character vectors
 
-Both `"` and `'` may be used for quoting text, but one style of quotes should be used consistently throughout a script. The only exception is when the text already contains double quotes and no single quotes. 
+Both `"` and `'` may be used for quoting text, but one style of quotes should be used consistently throughout a script. The only exception is when the text already contains double quotes and no single quotes or vice versa. 
 
 
 ```r
@@ -580,13 +578,47 @@ Prefer `TRUE` and `FALSE` over `T` and `F`.
 
 ## Comments
 
-Each line of a comment should begin with the comment symbol and a single 
-space: `# `
+In code, use comments to explain the "why" not the "what" or "how". Each line 
+of a comment should begin with the comment symbol and a single space: `# `.
+
+
+```r
+# Good
+
+# Objects like data frames are treated as leaves
+x <- map_if(x, is_bare_list, recurse)
+
+
+# Bad
+
+# Recurse only with bare lists
+x <- map_if(x, is_bare_list, recurse)
+```
 
 In data analysis code, use comments to record important findings and analysis 
 decisions. If you need comments to explain what your code is doing, consider 
 rewriting your code to be clearer. If you discover that you have more comments 
 than code, consider switching to [R Markdown][rmd].
+
+Comments should not exceed 80 characters per line. If a comment requires more space, use multiple lines and/or block commenting. Entering on a comment line starting with `#'` will ensure the next line is also commented out. 
+
+
+```r
+# Good
+# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra 
+# nulla enim, et venenatis neque bibendum ac. 
+
+#' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra 
+#' nulla enim, et venenatis neque bibendum ac. Sed lorem nisl, blandit at
+#' ante ut, luctus euismod lectus. Vivamus interdum ornare massa, condimentum 
+#' cursus velit tincidunt vitae. Nunc sit amet quam elementum, consequat elit 
+#' quis, consectetur est. Sed in eros ipsum. Etiam sed mattis tortor.
+
+
+# Bad
+# Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra nulla enim, et venenatis neque bibendum ac. Sed lorem nisl, blandit at ante ut, luctus euismod lectus. 
+```
+
 
 [syntax]: https://rdrr.io/r/base/Syntax.html
 [rmd]:    https://rmarkdown.rstudio.com/
