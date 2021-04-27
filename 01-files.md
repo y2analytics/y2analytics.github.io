@@ -59,7 +59,7 @@ responses <- read_sav(str_c(PROJECT_PATH, "data file.sav"))
 
 New column variables that will be referenced more than once should be created in a global mutate section towards the top of the code, close to or in the same section where the data is read in. If a variable will only be used in one section of analysis then it should be created as close to its use as possible. Functions should follow this same convention--functions used in multiple sections should be created at the top of the script while functions only used within a single section may be defined in that section. 
 
-Global variables you create should be given new names rather than replacing the existing variable they are based on. 
+Global variables you create should be given new names rather than replacing the existing variable they are based on. New column names should follow the convention established in the dataset they belong to (i.e. if the dataset has variables in ALLCAPS, the new variable name should be in ALLCAPS. If the dataset uses multiple naming conventions, default to snake_case). 
 
 Variables should be created using tidyverse functions and syntax where possible. Data manipulation should be done in as few steps as possible-don't use multiple mutate functions where one would suffice. 
 

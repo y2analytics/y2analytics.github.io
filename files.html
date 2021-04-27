@@ -23,7 +23,7 @@
 
 
 
-<meta name="date" content="2020-10-29" />
+<meta name="date" content="2020-11-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -261,7 +261,7 @@ startup file, such as <code>.Rprofile</code>.</p>
 <div id="data-manipulation" class="section level3">
 <h3><span class="header-section-number">1.2.4</span> Data manipulation</h3>
 <p>New column variables that will be referenced more than once should be created in a global mutate section towards the top of the code, close to or in the same section where the data is read in. If a variable will only be used in one section of analysis then it should be created as close to its use as possible. Functions should follow this same convention–functions used in multiple sections should be created at the top of the script while functions only used within a single section may be defined in that section.</p>
-<p>Global variables you create should be given new names rather than replacing the existing variable they are based on.</p>
+<p>Global variables you create should be given new names rather than replacing the existing variable they are based on. New column names should follow the convention established in the dataset they belong to (i.e. if the dataset has variables in ALLCAPS, the new variable name should be in ALLCAPS. If the dataset uses multiple naming conventions, default to snake_case).</p>
 <p>Variables should be created using tidyverse functions and syntax where possible. Data manipulation should be done in as few steps as possible-don’t use multiple mutate functions where one would suffice.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co"># Good</span></a>
 <a class="sourceLine" id="cb4-2" data-line-number="2">responses &lt;-<span class="st"> </span>responses <span class="op">%&gt;%</span><span class="st"> </span></a>

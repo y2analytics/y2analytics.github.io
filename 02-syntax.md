@@ -20,6 +20,8 @@ Constants (objects that will not change throughout the script) should be named u
 
 ```r
 CHART_PATH <- "filepath"
+BLUE <- "#OOOOFF"
+DIVERGENT_5 <- c("darkblue", "blue", "gray", "lightorange", "orange")
 ```
 
 New column names should follow the convention established in the dataset they belong to. Depending on the source of the dataset, this may be snake_case, CamelCase, ALLCAPS, alllowercase, or another format. 

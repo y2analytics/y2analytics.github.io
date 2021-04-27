@@ -227,7 +227,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-6" data-line-number="6">DayOne</a>
 <a class="sourceLine" id="cb1-7" data-line-number="7">day.one</a></code></pre></div>
 <p>Constants (objects that will not change throughout the script) should be named using all uppercase letters, and should be assigned at the top of the script.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">CHART_PATH &lt;-<span class="st"> &quot;filepath&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">CHART_PATH &lt;-<span class="st"> &quot;filepath&quot;</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">BLUE &lt;-<span class="st"> &quot;#OOOOFF&quot;</span></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">DIVERGENT_<span class="dv">5</span> &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;darkblue&quot;</span>, <span class="st">&quot;blue&quot;</span>, <span class="st">&quot;gray&quot;</span>, <span class="st">&quot;lightorange&quot;</span>, <span class="st">&quot;orange&quot;</span>)</a></code></pre></div>
 <p>New column names should follow the convention established in the dataset they belong to. Depending on the source of the dataset, this may be snake_case, CamelCase, ALLCAPS, alllowercase, or another format.</p>
 <p>Generally, variable names should be nouns and function names should be verbs (an exception to this may be functions designed to create charts). Strive for names that are concise and meaningful (this is not easy!).</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># Good</span></a>
